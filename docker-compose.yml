@@ -1,16 +1,35 @@
-version: '3'
+version: '3.8'
 services:
+  rasa:
+    image: rasa/rasa:3.0.1-full
+    container_name: rasa-server
+    ports:
+      - 5005:5005
+    volumes:
+      - ./rasa:/app
+    command:
+      - run
+      - --cors
+      - "*"
+      - --enable-api
+      - --debug
+      - --log-file
+      - out.log
+    depends_on:
+      - action-server
+
+  action-server:
+    build:
+      context: ./rasa
+    container_name: rasa-action-server
+#    image: rasa/rasa-sdk:3.0.2
+    volumes:
+      - ./rasa/actions:/app/actions
+    ports:
+      - "5055:5055"
+
   chatbot:
-    build: 
+    build:
       context: ./chatbot
     ports:
       - "5000:5000"
-  rasa-actions:
-    build: 
-      context: ./rasa
-    ports:
-      - "5055:5055"
-    volumes:
-      - ./actions:/app/actions
-    
-  
