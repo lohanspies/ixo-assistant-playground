@@ -1,10 +1,11 @@
 version: '3.8'
 services:
   rasa:
-    image: rasa/rasa:3.0.1-full
+#    image: rasa/rasa:3.0.1-full
+    image: rasa/rasa:2.8.15-full
     container_name: rasa-server
     ports:
-      - 5005:5005
+      - "5005:5005"
     volumes:
       - ./rasa:/app
     command:
@@ -15,6 +16,8 @@ services:
       - --debug
       - --log-file
       - out.log
+    networks:
+      - rasa
     depends_on:
       - action-server
 
@@ -27,9 +30,16 @@ services:
       - ./rasa/actions:/app/actions
     ports:
       - "5055:5055"
+    networks:
+      - rasa
 
   chatbot:
     build:
       context: ./chatbot
     ports:
       - "5000:5000"
+    networks:
+      - rasa
+
+networks:
+  rasa:

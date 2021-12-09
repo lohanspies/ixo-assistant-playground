@@ -9,7 +9,7 @@ from rasa_core.policies import KerasPolicy, MemoizationPolicy
 interpreter = RasaNLUInterpreter('rasa/models/nlu/profiler/nlu')
 agent = Agent.load('rasa/models/dialogue',
 	interpreter=interpreter,
-	action_endpoint=EndpointConfig('http://localhost:5055/webhook')
+	action_endpoint=EndpointConfig('http://0.0.0.0:5055/webhook')
     #for action endpoint
 )
 
