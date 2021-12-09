@@ -1,3 +1,7 @@
 /.env
 /rasa/.env
 /rasa/actions/.env
+rasa-env
+lib
+lib64
+.idea
