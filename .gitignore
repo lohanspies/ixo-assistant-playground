@@ -5,3 +5,6 @@ rasa-env
 lib
 lib64
 .idea
+models
+.congig
+.keras
