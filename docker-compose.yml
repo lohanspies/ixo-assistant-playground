@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.0'
 services:
   rasa:
 #    image: rasa/rasa:3.0.1-full
@@ -9,6 +9,7 @@ services:
     volumes:
       - ./rasa:/app
     command:
+#      - train
       - run
       - --cors
       - "*"
