@@ -1,0 +1,10 @@
+rasa_core
+rasa_sdk
+rasa_core_sdk
+rasa_nlu[spacy]
+nltk
+numpy
+pandas
+scikit-learn
+flask
+gunicorn
