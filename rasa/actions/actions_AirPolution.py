@@ -24,7 +24,7 @@ class ActionAirPolution(Action):
         """The custom action will take a location to search from the chatbot slots and
             sets the airPolution slot associated with the location
         """
-
+        
         airPolution = None
         status = None
         appID = WEATHER_API_KEY

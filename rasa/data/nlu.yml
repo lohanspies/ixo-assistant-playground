@@ -19,15 +19,14 @@ nlu:
 
 - intent: inquire_esri
   examples: |
-    - esri
-    - esri geocode [Cape Town](location)
-    - esri reverse_geocode[-137, 40](location)
+    - esri geocode [london](location)
+    - esri geocode [capetown](location)
 
 - lookup: location
   examples: |
-      - capetown
-      - london
-      - brussels
+    - capetown
+    - london
+    - brussels
 
 - intent: goodbye
   examples: |

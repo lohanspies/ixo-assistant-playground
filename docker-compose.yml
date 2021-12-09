@@ -1,15 +1,20 @@
 version: '3.0'
 services:
   rasa:
+    environment:
+      - UID=1000
+      - GID=1001
+    user: "${UID}:${GID}"
+    # env_file:
+    #   - ./rasa/.env
 #    image: rasa/rasa:3.0.1-full
     image: rasa/rasa:2.8.15-full
     container_name: rasa-server
     ports:
       - "5005:5005"
-    volumes:
+    volumes:  
       - ./rasa:/app
     command:
-#      - train
       - run
       - --cors
       - "*"

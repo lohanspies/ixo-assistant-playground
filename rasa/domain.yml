@@ -1,20 +1,19 @@
 version: "2.0"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - inquire_esri
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- inquire_esri
 
 entities:
-  - location
+- location
 
-actions:
-  - action_ESRI
+
 
 responses:
   utter_greet:
@@ -39,3 +38,5 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- action_ESRI
