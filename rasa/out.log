@@ -6736,3 +6736,109 @@ source_traceback: Object created at (most recent call last):
   File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
     return asyncio.ensure_future(target(*args, **kwargs))
 task: <Task pending name='Task-7' coro=<AsyncServer._service_task() running at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:498> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2b8da60>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:52:46,173 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 10:52:46,173 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-10 10:52:46,173 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 10:52:46,184 [INFO ]  Loading model models/20211209-214211.tar.gz...
+2021-12-10 10:52:46,741 [DEBUG]  Extracted model to '/tmp/tmp3axlrzvj'.
+2021-12-10 10:52:46,756 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 10:52:47,420 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 10:52:47,425 [INFO ]  Enabling coroutine debugging. Loop id 111234304.
+2021-12-10 10:52:47,426 [INFO ]  Loading model models/20211209-214211.tar.gz...
+2021-12-10 10:52:48,014 [DEBUG]  Extracted model to '/tmp/tmp0cuybmkh'.
+2021-12-10 10:52:48,127 [DEBUG]  Loading the model from /tmp/tmp0cuybmkh/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-10 10:52:48,203 [DEBUG]  Following metrics will be logged during training: 
+2021-12-10 10:52:48,203 [DEBUG]    t_loss (total loss)
+2021-12-10 10:52:48,203 [DEBUG]    i_acc (intent acc)
+2021-12-10 10:52:48,203 [DEBUG]    i_loss (intent loss)
+2021-12-10 10:52:48,204 [DEBUG]    e_f1 (entity f1)
+2021-12-10 10:52:48,204 [DEBUG]    e_loss (entity loss)
+2021-12-10 10:53:32,325 [DEBUG]  Finished loading the model.
+2021-12-10 10:53:32,326 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/tmp/tmp0cuybmkh/nlu' doesn't exist?
+2021-12-10 10:53:32,333 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 10:53:32,333 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 10:53:32,907 [DEBUG]  Extracted model to '/tmp/tmpyvb6b7ii'.
+2021-12-10 10:53:32,950 [DEBUG]  Loading the model from /tmp/tmpyvb6b7ii/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-12-10 10:53:41,794 [DEBUG]  Finished loading the model.
+2021-12-10 10:53:41,795 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-12-10 10:53:41,797 [DEBUG]  Loading the model from /tmp/tmpyvb6b7ii/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-10 10:53:50,063 [DEBUG]  Finished loading the model.
+2021-12-10 10:53:50,065 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 10:53:50,065 [INFO ]  Rasa server is up and running.
+2021-12-10 10:53:52,914 [DEBUG]  User kg0liWkjC3lgxHcDAAAB connected to socketIO endpoint.
+2021-12-10 10:53:52,944 [DEBUG]  User kg0liWkjC3lgxHcDAAAB connected to socketIO endpoint.
+2021-12-10 10:56:21,793 [DEBUG]  Issuing ticket for conversation '436637f1793a425f8d20de3823982267'.
+2021-12-10 10:56:21,798 [DEBUG]  Acquiring lock for conversation '436637f1793a425f8d20de3823982267'.
+2021-12-10 10:56:21,798 [DEBUG]  Acquired lock for conversation '436637f1793a425f8d20de3823982267'.
+2021-12-10 10:56:21,798 [DEBUG]  Could not find tracker for conversation ID '436637f1793a425f8d20de3823982267'.
+2021-12-10 10:56:21,798 [DEBUG]  Starting a new session for conversation ID '436637f1793a425f8d20de3823982267'.
+2021-12-10 10:56:21,800 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:56:21,800 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7fc2e60b5160>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-12-10 10:56:21,801 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:56:21,884 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 10:56:21,884 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 10:56:21,884 [DEBUG]  Received user message 'esri geocode Cape TOwn' with intent '{'id': 8820480180269083158, 'name': 'inquire_esri', 'confidence': 0.9998148083686829}' and entities '[{'entity': 'location', 'start': 13, 'end': 22, 'confidence_entity': 0.9946367144584656, 'value': 'Cape TOwn', 'extractor': 'DIETClassifier'}]'
+2021-12-10 10:56:21,885 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:56:21,885 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-12-10 10:56:21,886 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 10:56:21,886 [DEBUG]  There is no memorised next action
+2021-12-10 10:56:21,886 [DEBUG]  Current tracker state:
+[state 1] user text: esri geocode Cape TOwn | previous action name: action_listen
+2021-12-10 10:56:21,886 [DEBUG]  There is no applicable rule.
+2021-12-10 10:56:21,887 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 10:56:21,887 [DEBUG]  There is a rule for the next action 'action_ESRI'.
+2021-12-10 10:56:21,910 [DEBUG]  Querying for intent `inquire_esri`.
+2021-12-10 10:56:21,911 [DEBUG]  Query intent index 6 not found in label thresholds - {0: -1.6493088, 3: -1.1010964, 5: -0.55101544, 7: -1.2714869, 8: -1.0200973}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 10:56:21,954 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:56:21,954 [DEBUG]  Made prediction using user intent.
+2021-12-10 10:56:21,954 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 10:56:21,954 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:56:21,954 [DEBUG]  Predicted next action 'action_ESRI' with confidence 1.00.
+2021-12-10 10:56:21,955 [DEBUG]  Calling action endpoint to run action 'action_ESRI'.
+2021-12-10 10:56:24,476 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fc2e60b5670>]'.
+2021-12-10 10:56:24,477 [DEBUG]  Action 'action_ESRI' ended with events '[BotUttered('Searching for Image at location Cape TOwn', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639133784.4764702), BotUttered('The location provided is not valid. A string or [lat,long] is accepted', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639133784.4764848)]'.
+2021-12-10 10:56:24,477 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:56:24,482 [DEBUG]  Current tracker state:
+[state 1] previous action name: action_listen
+2021-12-10 10:56:24,482 [DEBUG]  There is no memorised next action
+2021-12-10 10:56:24,483 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 2] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+2021-12-10 10:56:24,483 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 10:56:24,484 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:56:24,522 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 10:56:24,522 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:56:24,522 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 10:56:24,523 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:56:24,523 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 10:56:24,523 [DEBUG]  Deleted lock for conversation '436637f1793a425f8d20de3823982267'.
