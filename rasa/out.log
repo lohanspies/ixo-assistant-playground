@@ -6736,7 +6736,483 @@ source_traceback: Object created at (most recent call last):
   File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
     return asyncio.ensure_future(target(*args, **kwargs))
 task: <Task pending name='Task-7' coro=<AsyncServer._service_task() running at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:498> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2b8da60>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+<<<<<<< HEAD
 2021-12-10 10:52:46,173 [DEBUG]  Available web server routes: 
+=======
+2021-12-10 10:55:41,883 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         GET                            handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 10:55:41,885 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-10 10:55:41,886 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 10:55:41,891 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 10:55:42,299 [DEBUG]  Extracted model to '/tmp/tmpttxrta4s'.
+2021-12-10 10:55:42,314 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 10:55:44,393 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 10:55:44,398 [INFO ]  Enabling coroutine debugging. Loop id 110778352.
+2021-12-10 10:55:44,399 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 10:55:44,760 [DEBUG]  Extracted model to '/tmp/tmpau4a4xlh'.
+2021-12-10 10:55:44,815 [DEBUG]  Loading the model from /tmp/tmpau4a4xlh/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-10 10:55:44,847 [DEBUG]  Following metrics will be logged during training: 
+2021-12-10 10:55:44,848 [DEBUG]    t_loss (total loss)
+2021-12-10 10:55:44,849 [DEBUG]    i_acc (intent acc)
+2021-12-10 10:55:44,849 [DEBUG]    i_loss (intent loss)
+2021-12-10 10:55:44,850 [DEBUG]    e_f1 (entity f1)
+2021-12-10 10:55:44,850 [DEBUG]    e_loss (entity loss)
+2021-12-10 10:56:06,314 [DEBUG]  Finished loading the model.
+2021-12-10 10:56:06,315 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/tmp/tmpau4a4xlh/nlu' doesn't exist?
+2021-12-10 10:56:06,323 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 10:56:06,324 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 10:56:06,698 [DEBUG]  Extracted model to '/tmp/tmpjlg3slp3'.
+2021-12-10 10:56:06,717 [DEBUG]  Loading the model from /tmp/tmpjlg3slp3/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-12-10 10:56:13,504 [DEBUG]  Finished loading the model.
+2021-12-10 10:56:13,505 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-12-10 10:56:13,507 [DEBUG]  Loading the model from /tmp/tmpjlg3slp3/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-10 10:56:19,838 [DEBUG]  Finished loading the model.
+2021-12-10 10:56:19,841 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 10:56:19,841 [INFO ]  Rasa server is up and running.
+2021-12-10 10:56:21,665 [DEBUG]  User WvVbaVEjLDA-LpORAAAB connected to socketIO endpoint.
+2021-12-10 10:56:21,682 [DEBUG]  User WvVbaVEjLDA-LpORAAAB connected to socketIO endpoint.
+2021-12-10 10:56:48,776 [DEBUG]  User PG2I9HLweL_OdlmeAAAD connected to socketIO endpoint.
+2021-12-10 10:56:48,817 [DEBUG]  User PG2I9HLweL_OdlmeAAAD connected to socketIO endpoint.
+2021-12-10 10:56:54,596 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:54,597 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:54,597 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:54,598 [DEBUG]  Could not find tracker for conversation ID '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:54,599 [DEBUG]  Starting a new session for conversation ID '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:54,600 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:56:54,602 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7f39dca43310>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-12-10 10:56:54,602 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:56:54,603 [DEBUG]  Received user message '/get_started' with intent '{'name': 'get_started', 'confidence': 1.0}' and entities '[]'
+2021-12-10 10:56:54,604 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-12-10 10:56:54,606 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+2021-12-10 10:56:54,608 [DEBUG]  There is no memorised next action
+2021-12-10 10:56:54,609 [DEBUG]  Current tracker state:
+[state 1] user text: /get_started | previous action name: action_listen
+2021-12-10 10:56:54,610 [DEBUG]  There is no applicable rule.
+2021-12-10 10:56:54,610 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+2021-12-10 10:56:54,611 [DEBUG]  There is no applicable rule.
+2021-12-10 10:56:54,612 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:56:54,649 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 10:56:54,650 [DEBUG]  Made prediction using user intent.
+2021-12-10 10:56:54,651 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 10:56:54,652 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 10:56:54,653 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.42.
+2021-12-10 10:56:54,654 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7f39dcca2730>]'.
+2021-12-10 10:56:54,654 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_happy"}, 1639133814.654237)]'.
+2021-12-10 10:56:54,657 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+2021-12-10 10:56:54,658 [DEBUG]  There is no memorised next action
+2021-12-10 10:56:54,658 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+2021-12-10 10:56:54,659 [DEBUG]  There is no applicable rule.
+2021-12-10 10:56:54,659 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:56:54,693 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 10:56:54,695 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 10:56:54,696 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-12-10 10:56:54,696 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:56:54,697 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 10:56:54,698 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:58,474 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:58,475 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:58,475 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:56:58,476 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 10:56:58,522 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 10:56:58,523 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 10:56:58,523 [DEBUG]  Received user message 'esri' with intent '{'id': -1669824533557701472, 'name': 'inquire_esri', 'confidence': 0.9995708465576172}' and entities '[]'
+2021-12-10 10:56:58,524 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2021-12-10 10:56:58,525 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+2021-12-10 10:56:58,526 [DEBUG]  There is no memorised next action
+2021-12-10 10:56:58,527 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user text: esri | previous action name: action_listen
+2021-12-10 10:56:58,527 [DEBUG]  There is no applicable rule.
+2021-12-10 10:56:58,528 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+2021-12-10 10:56:58,528 [DEBUG]  There is a rule for the next action 'action_ESRI'.
+2021-12-10 10:56:58,560 [DEBUG]  Querying for intent `inquire_esri`.
+2021-12-10 10:56:58,561 [DEBUG]  Query intent index 6 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 10:56:58,593 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:56:58,594 [DEBUG]  Made prediction using user intent.
+2021-12-10 10:56:58,595 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 10:56:58,595 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:56:58,596 [DEBUG]  Predicted next action 'action_ESRI' with confidence 1.00.
+2021-12-10 10:56:58,596 [DEBUG]  Calling action endpoint to run action 'action_ESRI'.
+2021-12-10 10:56:58,607 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7f39dcca2880>]'.
+2021-12-10 10:56:58,608 [DEBUG]  Action 'action_ESRI' ended with events '[BotUttered('No location detected', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639133818.6070035)]'.
+2021-12-10 10:56:58,608 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:56:58,610 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: get_started | previous action name: action_listen
+2021-12-10 10:56:58,610 [DEBUG]  There is no memorised next action
+2021-12-10 10:56:58,611 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+2021-12-10 10:56:58,611 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 10:56:58,612 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:56:58,645 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 10:56:58,646 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:56:58,647 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 10:56:58,647 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:56:58,648 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 10:56:58,648 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:06,383 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:06,384 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:06,385 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:06,385 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 10:57:06,433 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 10:57:06,434 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 10:57:06,435 [DEBUG]  Received user message 'lookup did:sov:' with intent '{'id': 8251508992876424014, 'name': 'greet', 'confidence': 0.8505789637565613}' and entities '[]'
+2021-12-10 10:57:06,436 [DEBUG]  Logged UserUtterance - tracker now has 14 events.
+2021-12-10 10:57:06,437 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+2021-12-10 10:57:06,438 [DEBUG]  There is no memorised next action
+2021-12-10 10:57:06,438 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user text: lookup did:sov: | previous action name: action_listen
+2021-12-10 10:57:06,439 [DEBUG]  There is no applicable rule.
+2021-12-10 10:57:06,440 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+2021-12-10 10:57:06,440 [DEBUG]  There is no applicable rule.
+2021-12-10 10:57:06,473 [DEBUG]  Querying for intent `greet`.
+2021-12-10 10:57:06,473 [DEBUG]  Score for intent `greet` is `1.9063230752944946`, while threshold is `-0.43182581663131714`.
+2021-12-10 10:57:06,474 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('restart', -1.7316363), ('session_start', -1.7316363), ('deny', -1.6015135), ('affirm', -1.5972595), ('greet', 1.9063231)]`.
+2021-12-10 10:57:06,506 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:57:06,507 [DEBUG]  Made prediction using user intent.
+2021-12-10 10:57:06,508 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 10:57:06,508 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 10:57:06,509 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.95.
+2021-12-10 10:57:06,510 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7f39dca43d00>]'.
+2021-12-10 10:57:06,510 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet"}, 1639133826.5102034)]'.
+2021-12-10 10:57:06,512 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: greet | previous action name: action_listen
+[state 4] user intent: greet | previous action name: utter_greet
+2021-12-10 10:57:06,513 [DEBUG]  There is no memorised next action
+2021-12-10 10:57:06,514 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+2021-12-10 10:57:06,515 [DEBUG]  There is no applicable rule.
+2021-12-10 10:57:06,515 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:57:06,547 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 10:57:06,549 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 10:57:06,549 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-12-10 10:57:06,550 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:57:06,551 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 10:57:06,551 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:13,206 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:13,207 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:13,208 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:57:13,208 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 10:57:13,262 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 10:57:13,263 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 10:57:13,264 [DEBUG]  Received user message 'esri geocode capetown' with intent '{'id': -1669824533557701472, 'name': 'inquire_esri', 'confidence': 0.999387800693512}' and entities '[{'entity': 'location', 'start': 13, 'end': 21, 'confidence_entity': 0.8838308453559875, 'value': 'capetown', 'extractor': 'DIETClassifier'}]'
+2021-12-10 10:57:13,264 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:57:13,265 [DEBUG]  Logged UserUtterance - tracker now has 19 events.
+2021-12-10 10:57:13,266 [DEBUG]  Current tracker state:
+[state 0] user intent: get_started | previous action name: action_listen
+[state 1] user intent: get_started | previous action name: utter_happy
+[state 2] user intent: greet | previous action name: action_listen
+[state 3] user intent: greet | previous action name: utter_greet
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 10:57:13,266 [DEBUG]  There is no memorised next action
+2021-12-10 10:57:13,267 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+[state 7] user text: esri geocode capetown | previous action name: action_listen
+2021-12-10 10:57:13,267 [DEBUG]  There is no applicable rule.
+2021-12-10 10:57:13,268 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+[state 7] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 10:57:13,269 [DEBUG]  There is a rule for the next action 'action_ESRI'.
+2021-12-10 10:57:13,301 [DEBUG]  Querying for intent `inquire_esri`.
+2021-12-10 10:57:13,302 [DEBUG]  Query intent index 6 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 10:57:13,336 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:57:13,337 [DEBUG]  Made prediction using user intent.
+2021-12-10 10:57:13,337 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 10:57:13,338 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:57:13,339 [DEBUG]  Predicted next action 'action_ESRI' with confidence 1.00.
+2021-12-10 10:57:13,340 [DEBUG]  Calling action endpoint to run action 'action_ESRI'.
+2021-12-10 10:57:17,559 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7f39dca43fd0>]'.
+2021-12-10 10:57:17,560 [DEBUG]  Action 'action_ESRI' ended with events '[BotUttered('Searching for Image at location capetown', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639133837.5591617), BotUttered('The location provided is not valid. A string or [lat,long] is accepted', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639133837.5591662)]'.
+2021-12-10 10:57:17,560 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:57:17,563 [DEBUG]  Current tracker state:
+[state 0] user intent: get_started | previous action name: action_listen
+[state 1] user intent: get_started | previous action name: utter_happy
+[state 2] user intent: greet | previous action name: action_listen
+[state 3] user intent: greet | previous action name: utter_greet
+[state 4] user intent: greet | previous action name: action_listen
+2021-12-10 10:57:17,563 [DEBUG]  There is no memorised next action
+2021-12-10 10:57:17,564 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+[state 7] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 8] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+2021-12-10 10:57:17,565 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 10:57:17,566 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:57:17,599 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:57:17,600 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:57:17,600 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 10:57:17,601 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:57:17,601 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 10:57:17,602 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:59:01,928 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:59:01,929 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:59:01,930 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 10:59:01,930 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 10:59:01,973 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 10:59:01,974 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 10:59:01,975 [DEBUG]  Received user message 'esri' with intent '{'id': -1669824533557701472, 'name': 'inquire_esri', 'confidence': 0.9995708465576172}' and entities '[]'
+2021-12-10 10:59:01,976 [DEBUG]  Logged UserUtterance - tracker now has 25 events.
+2021-12-10 10:59:01,977 [DEBUG]  Current tracker state:
+[state 0] user intent: get_started | previous action name: action_listen
+[state 1] user intent: get_started | previous action name: utter_happy
+[state 2] user intent: greet | previous action name: action_listen
+[state 3] user intent: greet | previous action name: utter_greet
+[state 4] user intent: inquire_esri | previous action name: action_listen
+2021-12-10 10:59:01,978 [DEBUG]  There is no memorised next action
+2021-12-10 10:59:01,979 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+[state 7] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 8] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 9] user text: esri | previous action name: action_listen
+2021-12-10 10:59:01,980 [DEBUG]  There is no applicable rule.
+2021-12-10 10:59:01,981 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+[state 7] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 8] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 9] user intent: inquire_esri | previous action name: action_listen
+2021-12-10 10:59:01,981 [DEBUG]  There is a rule for the next action 'action_ESRI'.
+2021-12-10 10:59:02,014 [DEBUG]  Querying for intent `inquire_esri`.
+2021-12-10 10:59:02,015 [DEBUG]  Query intent index 6 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 10:59:02,050 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:59:02,051 [DEBUG]  Made prediction using user intent.
+2021-12-10 10:59:02,051 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 10:59:02,052 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:59:02,052 [DEBUG]  Predicted next action 'action_ESRI' with confidence 1.00.
+2021-12-10 10:59:02,053 [DEBUG]  Calling action endpoint to run action 'action_ESRI'.
+2021-12-10 10:59:02,060 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7f39dca43490>]'.
+2021-12-10 10:59:02,061 [DEBUG]  Action 'action_ESRI' ended with events '[BotUttered('No location detected', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639133942.0609353)]'.
+2021-12-10 10:59:02,062 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 10:59:02,064 [DEBUG]  Current tracker state:
+[state 0] user intent: get_started | previous action name: action_listen
+[state 1] user intent: get_started | previous action name: utter_happy
+[state 2] user intent: greet | previous action name: action_listen
+[state 3] user intent: greet | previous action name: utter_greet
+[state 4] user intent: greet | previous action name: action_listen
+2021-12-10 10:59:02,065 [DEBUG]  There is no memorised next action
+2021-12-10 10:59:02,065 [DEBUG]  Current tracker state:
+[state 1] user intent: get_started | previous action name: action_listen
+[state 2] user intent: get_started | previous action name: utter_happy
+[state 3] user intent: inquire_esri | previous action name: action_listen
+[state 4] user intent: inquire_esri | previous action name: action_ESRI
+[state 5] user intent: greet | previous action name: action_listen
+[state 6] user intent: greet | previous action name: utter_greet
+[state 7] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 8] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 9] user intent: inquire_esri | previous action name: action_listen
+[state 10] user intent: inquire_esri | previous action name: action_ESRI
+2021-12-10 10:59:02,066 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 10:59:02,067 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 10:59:02,099 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 10:59:02,100 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 10:59:02,101 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 10:59:02,101 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 10:59:02,102 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 10:59:02,103 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:08:05,709 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 11:08:05,711 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-10 11:08:05,712 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 11:08:05,718 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 11:08:06,151 [DEBUG]  Extracted model to '/tmp/tmpalacp3uz'.
+2021-12-10 11:08:06,166 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 11:08:07,468 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 11:08:07,472 [INFO ]  Enabling coroutine debugging. Loop id 119053856.
+2021-12-10 11:08:07,473 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 11:08:07,838 [DEBUG]  Extracted model to '/tmp/tmpz7po04wu'.
+2021-12-10 11:08:07,896 [DEBUG]  Loading the model from /tmp/tmpz7po04wu/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-10 11:08:07,930 [DEBUG]  Following metrics will be logged during training: 
+2021-12-10 11:08:07,931 [DEBUG]    t_loss (total loss)
+2021-12-10 11:08:07,931 [DEBUG]    i_acc (intent acc)
+2021-12-10 11:08:07,932 [DEBUG]    i_loss (intent loss)
+2021-12-10 11:08:07,933 [DEBUG]    e_f1 (entity f1)
+2021-12-10 11:08:07,933 [DEBUG]    e_loss (entity loss)
+2021-12-10 11:08:30,617 [DEBUG]  Finished loading the model.
+2021-12-10 11:08:30,619 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/tmp/tmpz7po04wu/nlu' doesn't exist?
+2021-12-10 11:08:30,628 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 11:08:30,629 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 11:08:31,006 [DEBUG]  Extracted model to '/tmp/tmp1d1zunfm'.
+2021-12-10 11:08:31,027 [DEBUG]  Loading the model from /tmp/tmp1d1zunfm/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-12-10 11:08:37,545 [DEBUG]  Finished loading the model.
+2021-12-10 11:08:37,546 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-12-10 11:08:37,547 [DEBUG]  Loading the model from /tmp/tmp1d1zunfm/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-10 11:08:43,961 [DEBUG]  Finished loading the model.
+2021-12-10 11:08:43,978 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 11:08:43,979 [INFO ]  Rasa server is up and running.
+2021-12-10 11:08:44,452 [DEBUG]  User 27BYs4jyKYU_em3-AAAB connected to socketIO endpoint.
+2021-12-10 11:08:44,468 [DEBUG]  User 27BYs4jyKYU_em3-AAAB connected to socketIO endpoint.
+2021-12-10 11:09:42,460 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         OPTIONS                        handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 11:09:42,462 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-10 11:09:42,463 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 11:09:42,468 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 11:09:42,942 [DEBUG]  Extracted model to '/tmp/tmpbnepbzjr'.
+2021-12-10 11:09:42,963 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 11:09:44,254 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 11:09:44,258 [INFO ]  Enabling coroutine debugging. Loop id 106404752.
+2021-12-10 11:09:44,260 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 11:09:44,656 [DEBUG]  Extracted model to '/tmp/tmpd1fh5399'.
+2021-12-10 11:09:44,731 [DEBUG]  Loading the model from /tmp/tmpd1fh5399/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-10 11:09:44,768 [DEBUG]  Following metrics will be logged during training: 
+2021-12-10 11:09:44,769 [DEBUG]    t_loss (total loss)
+2021-12-10 11:09:44,769 [DEBUG]    i_acc (intent acc)
+2021-12-10 11:09:44,769 [DEBUG]    i_loss (intent loss)
+2021-12-10 11:09:44,770 [DEBUG]    e_f1 (entity f1)
+2021-12-10 11:09:44,770 [DEBUG]    e_loss (entity loss)
+2021-12-10 11:10:08,379 [DEBUG]  Finished loading the model.
+2021-12-10 11:10:08,381 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/tmp/tmpd1fh5399/nlu' doesn't exist?
+2021-12-10 11:10:08,392 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 11:10:08,393 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 11:10:08,785 [DEBUG]  Extracted model to '/tmp/tmp0pzepwr9'.
+2021-12-10 11:10:08,806 [DEBUG]  Loading the model from /tmp/tmp0pzepwr9/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-12-10 11:10:15,670 [DEBUG]  Finished loading the model.
+2021-12-10 11:10:15,671 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-12-10 11:10:15,673 [DEBUG]  Loading the model from /tmp/tmp0pzepwr9/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-10 11:10:22,492 [DEBUG]  Finished loading the model.
+2021-12-10 11:10:22,495 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 11:10:22,496 [INFO ]  Rasa server is up and running.
+2021-12-10 11:10:25,979 [DEBUG]  User TXvd1g6gvSI6c67NAAAB connected to socketIO endpoint.
+2021-12-10 11:10:26,009 [DEBUG]  User TXvd1g6gvSI6c67NAAAB connected to socketIO endpoint.
+2021-12-10 11:10:27,614 [DEBUG]  User jL4Bf1vYO0cn3wSGAAAD connected to socketIO endpoint.
+2021-12-10 11:10:27,627 [DEBUG]  User jL4Bf1vYO0cn3wSGAAAD connected to socketIO endpoint.
+2021-12-10 11:11:40,633 [DEBUG]  Available web server routes: 
+>>>>>>> d471fd8da0db6d667c42e706e71fb3cb2c30b76e
 /conversations/<conversation_id:path>/messages     POST                           add_message
 /conversations/<conversation_id:path>/tracker/events POST                           append_events
 /webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
@@ -6762,6 +7238,7 @@ task: <Task pending name='Task-7' coro=<AsyncServer._service_task() running at /
 /conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
 /model                                             DELETE                         unload_model
 /version                                           GET                            version
+<<<<<<< HEAD
 2021-12-10 10:52:46,173 [INFO ]  Starting Rasa server on http://localhost:5005
 2021-12-10 10:52:46,173 [DEBUG]  Using the default number of Sanic workers (1).
 2021-12-10 10:52:46,184 [INFO ]  Loading model models/20211209-214211.tar.gz...
@@ -6842,3 +7319,691 @@ task: <Task pending name='Task-7' coro=<AsyncServer._service_task() running at /
 2021-12-10 10:56:24,523 [DEBUG]  Policy prediction ended with events '[]'.
 2021-12-10 10:56:24,523 [DEBUG]  Action 'action_listen' ended with events '[]'.
 2021-12-10 10:56:24,523 [DEBUG]  Deleted lock for conversation '436637f1793a425f8d20de3823982267'.
+=======
+2021-12-10 11:11:40,635 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-10 11:11:40,636 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 11:11:40,642 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 11:11:41,059 [DEBUG]  Extracted model to '/tmp/tmpqlrwt6ao'.
+2021-12-10 11:11:41,090 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 11:11:42,411 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 11:11:42,415 [INFO ]  Enabling coroutine debugging. Loop id 94359664.
+2021-12-10 11:11:42,417 [INFO ]  Loading model models/20211209-211655.tar.gz...
+2021-12-10 11:11:42,845 [DEBUG]  Extracted model to '/tmp/tmpqcgss76u'.
+2021-12-10 11:11:42,927 [DEBUG]  Loading the model from /tmp/tmpqcgss76u/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-10 11:11:42,985 [DEBUG]  Following metrics will be logged during training: 
+2021-12-10 11:11:42,986 [DEBUG]    t_loss (total loss)
+2021-12-10 11:11:42,987 [DEBUG]    i_acc (intent acc)
+2021-12-10 11:11:42,988 [DEBUG]    i_loss (intent loss)
+2021-12-10 11:11:42,989 [DEBUG]    e_f1 (entity f1)
+2021-12-10 11:11:42,990 [DEBUG]    e_loss (entity loss)
+2021-12-10 11:12:05,905 [DEBUG]  Finished loading the model.
+2021-12-10 11:12:05,907 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/tmp/tmpqcgss76u/nlu' doesn't exist?
+2021-12-10 11:12:05,915 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 11:12:05,916 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 11:12:06,296 [DEBUG]  Extracted model to '/tmp/tmpwcu54i56'.
+2021-12-10 11:12:06,316 [DEBUG]  Loading the model from /tmp/tmpwcu54i56/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-12-10 11:12:13,267 [DEBUG]  Finished loading the model.
+2021-12-10 11:12:13,268 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-12-10 11:12:13,271 [DEBUG]  Loading the model from /tmp/tmpwcu54i56/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-10 11:12:19,773 [DEBUG]  Finished loading the model.
+2021-12-10 11:12:19,775 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 11:12:19,776 [INFO ]  Rasa server is up and running.
+2021-12-10 11:12:19,984 [DEBUG]  User u4y2r40O19HSSHd2AAAB connected to socketIO endpoint.
+2021-12-10 11:12:20,008 [DEBUG]  User u4y2r40O19HSSHd2AAAB connected to socketIO endpoint.
+2021-12-10 11:12:22,981 [DEBUG]  User MqLhnwtVQDj3w_KuAAAD connected to socketIO endpoint.
+2021-12-10 11:12:22,992 [DEBUG]  User MqLhnwtVQDj3w_KuAAAD connected to socketIO endpoint.
+2021-12-10 11:12:55,728 [DEBUG]  User u4y2r40O19HSSHd2AAAB disconnected from socketIO endpoint.
+2021-12-10 11:12:56,095 [DEBUG]  User xHqGa7ITj9KXDy0aAAAF connected to socketIO endpoint.
+2021-12-10 11:12:56,121 [DEBUG]  User xHqGa7ITj9KXDy0aAAAF connected to socketIO endpoint.
+2021-12-10 11:12:59,671 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:12:59,671 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:12:59,672 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:12:59,673 [DEBUG]  Could not find tracker for conversation ID '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:12:59,674 [DEBUG]  Starting a new session for conversation ID '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:12:59,676 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:12:59,676 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7fa578515040>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-12-10 11:12:59,677 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:12:59,732 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 11:12:59,733 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 11:12:59,734 [DEBUG]  The difference in NLU confidences for the top two intents (0.06522044539451599) is lower than the ambiguity threshold 0.10. Predicting intent 'nlu_fallback' instead of 'affirm'.
+2021-12-10 11:12:59,734 [DEBUG]  Received user message 'what is the time?' with intent '{'name': 'nlu_fallback', 'confidence': 0.3}' and entities '[]'
+2021-12-10 11:12:59,735 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-12-10 11:12:59,736 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:12:59,737 [DEBUG]  There is no memorised next action
+2021-12-10 11:12:59,737 [DEBUG]  Current tracker state:
+[state 1] user text: what is the time? | previous action name: action_listen
+2021-12-10 11:12:59,738 [DEBUG]  There is no applicable rule.
+2021-12-10 11:12:59,739 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:12:59,739 [DEBUG]  There is no applicable rule.
+2021-12-10 11:12:59,757 [DEBUG]  Querying for intent `nlu_fallback`.
+2021-12-10 11:12:59,758 [DEBUG]  Query intent index 9 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 11:12:59,790 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 11:12:59,791 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:12:59,792 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:12:59,793 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:12:59,793 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.42.
+2021-12-10 11:12:59,794 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa5614eaca0>]'.
+2021-12-10 11:12:59,795 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_happy"}, 1639134779.7947447)]'.
+2021-12-10 11:12:59,797 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:12:59,798 [DEBUG]  There is no memorised next action
+2021-12-10 11:12:59,798 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:12:59,799 [DEBUG]  There is no applicable rule.
+2021-12-10 11:12:59,799 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 11:12:59,832 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:12:59,834 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:12:59,834 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-12-10 11:12:59,835 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:12:59,835 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:12:59,836 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:09,429 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:09,430 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:09,430 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:09,431 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:13:09,496 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 11:13:09,496 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 11:13:09,497 [DEBUG]  Received user message 'what time is it in cape town' with intent '{'id': 9072000999103631352, 'name': 'inquire_esri', 'confidence': 0.8204683065414429}' and entities '[{'entity': 'location', 'start': 19, 'end': 28, 'confidence_entity': 0.8510311245918274, 'value': 'cape town', 'extractor': 'DIETClassifier'}]'
+2021-12-10 11:13:09,498 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:13:09,499 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2021-12-10 11:13:09,499 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 11:13:09,500 [DEBUG]  There is no memorised next action
+2021-12-10 11:13:09,501 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user text: what time is it in cape town | previous action name: action_listen
+2021-12-10 11:13:09,501 [DEBUG]  There is no applicable rule.
+2021-12-10 11:13:09,503 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 11:13:09,504 [DEBUG]  There is a rule for the next action 'action_ESRI'.
+2021-12-10 11:13:09,540 [DEBUG]  Querying for intent `inquire_esri`.
+2021-12-10 11:13:09,540 [DEBUG]  Query intent index 6 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 11:13:09,577 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-10 11:13:09,578 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:13:09,578 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:13:09,579 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:13:09,579 [DEBUG]  Predicted next action 'action_ESRI' with confidence 1.00.
+2021-12-10 11:13:09,580 [DEBUG]  Calling action endpoint to run action 'action_ESRI'.
+2021-12-10 11:13:13,519 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa5786e8460>]'.
+2021-12-10 11:13:13,520 [DEBUG]  Action 'action_ESRI' ended with events '[BotUttered('Searching for Image at location cape town', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639134793.5195396), BotUttered('The location provided is not valid. A string or [lat,long] is accepted', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639134793.519545)]'.
+2021-12-10 11:13:13,521 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:13:13,523 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:13:13,524 [DEBUG]  There is no memorised next action
+2021-12-10 11:13:13,544 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+2021-12-10 11:13:13,544 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 11:13:13,545 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 11:13:13,578 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 11:13:13,579 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:13:13,580 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 11:13:13,581 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:13:13,581 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:13:13,582 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:39,141 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:39,143 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:39,144 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:13:39,144 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:13:39,203 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 11:13:39,203 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 11:13:39,204 [DEBUG]  NLU confidence 0.274572491645813 for intent 'mood_great' is lower than NLU threshold 0.30.
+2021-12-10 11:13:39,205 [DEBUG]  Received user message 'what time is it in amsterdam' with intent '{'name': 'nlu_fallback', 'confidence': 0.3}' and entities '[]'
+2021-12-10 11:13:39,206 [DEBUG]  Logged UserUtterance - tracker now has 15 events.
+2021-12-10 11:13:39,207 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:13:39,208 [DEBUG]  There is no memorised next action
+2021-12-10 11:13:39,208 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user text: what time is it in amsterdam | previous action name: action_listen
+2021-12-10 11:13:39,209 [DEBUG]  There is no applicable rule.
+2021-12-10 11:13:39,210 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:13:39,210 [DEBUG]  There is no applicable rule.
+2021-12-10 11:13:39,242 [DEBUG]  Querying for intent `nlu_fallback`.
+2021-12-10 11:13:39,243 [DEBUG]  Query intent index 9 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 11:13:39,277 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 11:13:39,278 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:13:39,278 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:13:39,279 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:13:39,279 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.57.
+2021-12-10 11:13:39,280 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa560be0eb0>]'.
+2021-12-10 11:13:39,280 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_happy"}, 1639134819.2805102)]'.
+2021-12-10 11:13:39,282 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: nlu_fallback | previous action name: action_listen
+[state 4] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:13:39,283 [DEBUG]  There is no memorised next action
+2021-12-10 11:13:39,284 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:13:39,284 [DEBUG]  There is no applicable rule.
+2021-12-10 11:13:39,285 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 11:13:39,318 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:13:39,319 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:13:39,320 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-12-10 11:13:39,321 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:13:39,321 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:13:39,322 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:21,826 [DEBUG]  User xHqGa7ITj9KXDy0aAAAF disconnected from socketIO endpoint.
+2021-12-10 11:22:22,196 [DEBUG]  User 0I0_4pLqNLRGPXeMAAAH connected to socketIO endpoint.
+2021-12-10 11:22:22,243 [DEBUG]  User 0I0_4pLqNLRGPXeMAAAH connected to socketIO endpoint.
+2021-12-10 11:22:27,221 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:27,222 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:27,223 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:27,223 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:22:27,283 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 11:22:27,284 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 11:22:27,285 [DEBUG]  NLU confidence 0.274572491645813 for intent 'mood_great' is lower than NLU threshold 0.30.
+2021-12-10 11:22:27,286 [DEBUG]  Received user message 'what time is it in amsterdam' with intent '{'name': 'nlu_fallback', 'confidence': 0.3}' and entities '[]'
+2021-12-10 11:22:27,287 [DEBUG]  Logged UserUtterance - tracker now has 20 events.
+2021-12-10 11:22:27,288 [DEBUG]  Current tracker state:
+[state 0] user intent: nlu_fallback | previous action name: action_listen
+[state 1] user intent: nlu_fallback | previous action name: utter_happy
+[state 2] user intent: nlu_fallback | previous action name: action_listen
+[state 3] user intent: nlu_fallback | previous action name: utter_happy
+[state 4] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:22:27,289 [DEBUG]  There is no memorised next action
+2021-12-10 11:22:27,290 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+[state 7] user text: what time is it in amsterdam | previous action name: action_listen
+2021-12-10 11:22:27,291 [DEBUG]  There is no applicable rule.
+2021-12-10 11:22:27,291 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+[state 7] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:22:27,292 [DEBUG]  There is no applicable rule.
+2021-12-10 11:22:27,326 [DEBUG]  Querying for intent `nlu_fallback`.
+2021-12-10 11:22:27,326 [DEBUG]  Query intent index 9 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 11:22:27,360 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 11:22:27,361 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:22:27,362 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:22:27,362 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:22:27,363 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.64.
+2021-12-10 11:22:27,364 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa578626730>]'.
+2021-12-10 11:22:27,364 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_happy"}, 1639135347.3640015)]'.
+2021-12-10 11:22:27,366 [DEBUG]  Current tracker state:
+[state 0] user intent: nlu_fallback | previous action name: utter_happy
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: nlu_fallback | previous action name: action_listen
+[state 4] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:22:27,367 [DEBUG]  There is no memorised next action
+2021-12-10 11:22:27,368 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+[state 7] user intent: nlu_fallback | previous action name: action_listen
+[state 8] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:22:27,368 [DEBUG]  There is no applicable rule.
+2021-12-10 11:22:27,369 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 11:22:27,405 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:22:27,406 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:22:27,406 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-12-10 11:22:27,407 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:22:27,408 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:22:27,409 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:36,369 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:36,370 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:36,370 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:36,371 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:22:36,428 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-10 11:22:36,429 [DEBUG]  Adding following selector key to message property: default
+2021-12-10 11:22:36,430 [DEBUG]  NLU confidence 0.274572491645813 for intent 'mood_great' is lower than NLU threshold 0.30.
+2021-12-10 11:22:36,431 [DEBUG]  Received user message 'what time is it in amsterdam' with intent '{'name': 'nlu_fallback', 'confidence': 0.3}' and entities '[]'
+2021-12-10 11:22:36,432 [DEBUG]  Logged UserUtterance - tracker now has 25 events.
+2021-12-10 11:22:36,433 [DEBUG]  Current tracker state:
+[state 0] user intent: nlu_fallback | previous action name: action_listen
+[state 1] user intent: nlu_fallback | previous action name: utter_happy
+[state 2] user intent: nlu_fallback | previous action name: action_listen
+[state 3] user intent: nlu_fallback | previous action name: utter_happy
+[state 4] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:22:36,434 [DEBUG]  There is no memorised next action
+2021-12-10 11:22:36,435 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+[state 7] user intent: nlu_fallback | previous action name: action_listen
+[state 8] user intent: nlu_fallback | previous action name: utter_happy
+[state 9] user text: what time is it in amsterdam | previous action name: action_listen
+2021-12-10 11:22:36,435 [DEBUG]  There is no applicable rule.
+2021-12-10 11:22:36,436 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+[state 7] user intent: nlu_fallback | previous action name: action_listen
+[state 8] user intent: nlu_fallback | previous action name: utter_happy
+[state 9] user intent: nlu_fallback | previous action name: action_listen
+2021-12-10 11:22:36,437 [DEBUG]  There is no applicable rule.
+2021-12-10 11:22:36,473 [DEBUG]  Querying for intent `nlu_fallback`.
+2021-12-10 11:22:36,474 [DEBUG]  Query intent index 9 not found in label thresholds - {0: -0.8565985, 3: -0.9903068, 5: -0.43182582, 7: -0.89596575, 8: -2.168037}. Check for `action_unlikely_intent` prediction will be skipped.
+2021-12-10 11:22:36,507 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-10 11:22:36,508 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:22:36,509 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:22:36,510 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:22:36,513 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.64.
+2021-12-10 11:22:36,514 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7fa561509a30>]'.
+2021-12-10 11:22:36,515 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_happy"}, 1639135356.5147605)]'.
+2021-12-10 11:22:36,517 [DEBUG]  Current tracker state:
+[state 0] user intent: nlu_fallback | previous action name: utter_happy
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: nlu_fallback | previous action name: action_listen
+[state 4] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:22:36,518 [DEBUG]  There is no memorised next action
+2021-12-10 11:22:36,519 [DEBUG]  Current tracker state:
+[state 1] user intent: nlu_fallback | previous action name: action_listen
+[state 2] user intent: nlu_fallback | previous action name: utter_happy
+[state 3] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 5] user intent: nlu_fallback | previous action name: action_listen
+[state 6] user intent: nlu_fallback | previous action name: utter_happy
+[state 7] user intent: nlu_fallback | previous action name: action_listen
+[state 8] user intent: nlu_fallback | previous action name: utter_happy
+[state 9] user intent: nlu_fallback | previous action name: action_listen
+[state 10] user intent: nlu_fallback | previous action name: utter_happy
+2021-12-10 11:22:36,520 [DEBUG]  There is no applicable rule.
+2021-12-10 11:22:36,521 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered`, event's intent is new and not in domain or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-10 11:22:36,557 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:22:36,558 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-10 11:22:36,559 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-12-10 11:22:36,559 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:22:36,560 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:22:36,561 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:22:54,337 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 11:22:54,338 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-10 11:22:54,339 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 11:22:54,345 [INFO ]  Loading model models/20211210-112207.tar.gz...
+2021-12-10 11:22:54,748 [DEBUG]  Extracted model to '/tmp/tmp20snmwwr'.
+2021-12-10 11:22:54,763 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 11:22:56,086 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 11:22:56,090 [INFO ]  Enabling coroutine debugging. Loop id 107165008.
+2021-12-10 11:22:56,091 [INFO ]  Loading model models/20211210-112207.tar.gz...
+2021-12-10 11:22:56,446 [DEBUG]  Extracted model to '/tmp/tmpxj4nragn'.
+2021-12-10 11:22:56,502 [DEBUG]  Loading the model from /tmp/tmpxj4nragn/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-10 11:22:56,538 [DEBUG]  Following metrics will be logged during training: 
+2021-12-10 11:22:56,539 [DEBUG]    t_loss (total loss)
+2021-12-10 11:22:56,539 [DEBUG]    i_acc (intent acc)
+2021-12-10 11:22:56,540 [DEBUG]    i_loss (intent loss)
+2021-12-10 11:22:56,540 [DEBUG]    e_f1 (entity f1)
+2021-12-10 11:22:56,541 [DEBUG]    e_loss (entity loss)
+2021-12-10 11:23:18,752 [DEBUG]  Finished loading the model.
+2021-12-10 11:23:18,761 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 11:23:18,762 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 11:23:19,118 [DEBUG]  Extracted model to '/tmp/tmpuqllz3l4'.
+2021-12-10 11:23:19,142 [DEBUG]  Loading the model from /tmp/tmpuqllz3l4/core/policy_2_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-10 11:23:27,072 [DEBUG]  Finished loading the model.
+2021-12-10 11:23:27,074 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 11:23:27,075 [INFO ]  Rasa server is up and running.
+2021-12-10 11:23:27,743 [DEBUG]  User 32TG-NdLGNFqwpsXAAAB connected to socketIO endpoint.
+2021-12-10 11:23:27,760 [DEBUG]  User 32TG-NdLGNFqwpsXAAAB connected to socketIO endpoint.
+2021-12-10 11:23:31,606 [DEBUG]  User 2jQl5Y7nqcVlVS_dAAAD connected to socketIO endpoint.
+2021-12-10 11:23:31,622 [DEBUG]  User 2jQl5Y7nqcVlVS_dAAAD connected to socketIO endpoint.
+2021-12-10 11:23:31,912 [DEBUG]  User 32TG-NdLGNFqwpsXAAAB disconnected from socketIO endpoint.
+2021-12-10 11:23:32,267 [DEBUG]  User 7aYgZXQ2uIc_JcUsAAAF connected to socketIO endpoint.
+2021-12-10 11:23:32,288 [DEBUG]  User 7aYgZXQ2uIc_JcUsAAAF connected to socketIO endpoint.
+2021-12-10 11:23:37,794 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:37,795 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:37,795 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:37,796 [DEBUG]  Could not find tracker for conversation ID '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:37,797 [DEBUG]  Starting a new session for conversation ID '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:37,799 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:23:37,800 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7ff517f86fa0>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-12-10 11:23:37,800 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:23:37,864 [DEBUG]  Received user message 'what time is it in amsterdam?' with intent '{'id': 621614053048618687, 'name': 'inquire_time', 'confidence': 0.7783230543136597}' and entities '[{'entity': 'place', 'start': 19, 'end': 28, 'confidence_entity': 0.9819706678390503, 'value': 'amsterdam', 'extractor': 'DIETClassifier'}, {'entity': 'place', 'start': 19, 'end': 28, 'value': 'amsterdam', 'extractor': 'RegexEntityExtractor'}]'
+2021-12-10 11:23:37,865 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:23:37,866 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-12-10 11:23:37,867 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+2021-12-10 11:23:37,867 [DEBUG]  There is no memorised next action
+2021-12-10 11:23:37,868 [DEBUG]  Current tracker state:
+[state 1] user text: what time is it in amsterdam? | previous action name: action_listen
+2021-12-10 11:23:37,868 [DEBUG]  There is no applicable rule.
+2021-12-10 11:23:37,869 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+2021-12-10 11:23:37,869 [DEBUG]  There is a rule for the next action 'action_tell_time'.
+2021-12-10 11:23:37,907 [DEBUG]  TED predicted 'action_tell_time' based on user intent.
+2021-12-10 11:23:37,909 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:23:37,910 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:23:37,911 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:23:37,911 [DEBUG]  Predicted next action 'action_tell_time' with confidence 1.00.
+2021-12-10 11:23:37,912 [DEBUG]  Calling action endpoint to run action 'action_tell_time'.
+2021-12-10 11:23:37,922 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff52ccc6fd0>]'.
+2021-12-10 11:23:37,923 [DEBUG]  Action 'action_tell_time' ended with events '[BotUttered('It's 12:23 in amsterdam now.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639135417.9228435)]'.
+2021-12-10 11:23:37,924 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:23:37,925 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+2021-12-10 11:23:37,926 [DEBUG]  There is no memorised next action
+2021-12-10 11:23:37,927 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+2021-12-10 11:23:37,927 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 11:23:37,968 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:23:37,969 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:23:37,969 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 11:23:37,970 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:23:37,970 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:23:37,971 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:48,915 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:48,916 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:48,916 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:23:48,917 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:23:48,975 [DEBUG]  Received user message 'what is did:sov:1234' with intent '{'id': -5530616056204074000, 'name': 'where_i_live', 'confidence': 0.3297780752182007}' and entities '[]'
+2021-12-10 11:23:48,976 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2021-12-10 11:23:48,977 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+2021-12-10 11:23:48,977 [DEBUG]  There is no memorised next action
+2021-12-10 11:23:48,978 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user text: what is did:sov:1234 | previous action name: action_listen
+2021-12-10 11:23:48,979 [DEBUG]  There is no applicable rule.
+2021-12-10 11:23:48,980 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+2021-12-10 11:23:48,980 [DEBUG]  There is a rule for the next action 'action_remember_where'.
+2021-12-10 11:23:49,021 [DEBUG]  TED predicted 'action_remember_where' based on user intent.
+2021-12-10 11:23:49,022 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:23:49,023 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:23:49,024 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:23:49,024 [DEBUG]  Predicted next action 'action_remember_where' with confidence 1.00.
+2021-12-10 11:23:49,025 [DEBUG]  Calling action endpoint to run action 'action_remember_where'.
+2021-12-10 11:23:49,034 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff52cdd46a0>]'.
+2021-12-10 11:23:49,035 [DEBUG]  Action 'action_remember_where' ended with events '[BotUttered('I didn't get where you lived. Are you sure it's spelled correctly?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639135429.0347357)]'.
+2021-12-10 11:23:49,036 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:23:49,038 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+2021-12-10 11:23:49,039 [DEBUG]  There is no memorised next action
+2021-12-10 11:23:49,040 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+2021-12-10 11:23:49,041 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 11:23:49,090 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:23:49,091 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:23:49,092 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 11:23:49,092 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:23:49,093 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:23:49,094 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:04,151 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:04,152 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:04,153 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:04,153 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:24:04,208 [DEBUG]  Received user message 'esri geocode capetown' with intent '{'id': 5930382113111208375, 'name': 'inquire_esri', 'confidence': 0.986602246761322}' and entities '[{'entity': 'location', 'start': 13, 'end': 21, 'confidence_entity': 0.4521631598472595, 'value': 'capetown', 'extractor': 'DIETClassifier'}]'
+2021-12-10 11:24:04,209 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:24:04,209 [DEBUG]  Logged UserUtterance - tracker now has 14 events.
+2021-12-10 11:24:04,210 [DEBUG]  Current tracker state:
+[state 0] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 2] user intent: where_i_live | previous action name: action_listen
+[state 3] user intent: where_i_live | previous action name: action_remember_where
+[state 4] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 11:24:04,211 [DEBUG]  There is no memorised next action
+2021-12-10 11:24:04,212 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user text: esri geocode capetown | previous action name: action_listen
+2021-12-10 11:24:04,212 [DEBUG]  There is no applicable rule.
+2021-12-10 11:24:04,213 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+2021-12-10 11:24:04,214 [DEBUG]  There is a rule for the next action 'action_ESRI'.
+2021-12-10 11:24:04,256 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:24:04,257 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:24:04,257 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:24:04,258 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:24:04,258 [DEBUG]  Predicted next action 'action_ESRI' with confidence 1.00.
+2021-12-10 11:24:04,259 [DEBUG]  Calling action endpoint to run action 'action_ESRI'.
+2021-12-10 11:24:08,329 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff52c21ceb0>]'.
+2021-12-10 11:24:08,330 [DEBUG]  Action 'action_ESRI' ended with events '[BotUttered('Searching for Image at location capetown', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639135448.3294597), BotUttered('The location provided is not valid. A string or [lat,long] is accepted', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639135448.329465)]'.
+2021-12-10 11:24:08,330 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:24:08,333 [DEBUG]  Current tracker state:
+[state 0] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 2] user intent: where_i_live | previous action name: action_listen
+[state 3] user intent: where_i_live | previous action name: action_remember_where
+[state 4] user intent: where_i_live | previous action name: action_listen
+2021-12-10 11:24:08,334 [DEBUG]  There is no memorised next action
+2021-12-10 11:24:08,335 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+2021-12-10 11:24:08,336 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 11:24:08,383 [DEBUG]  TED predicted 'action_remember_where' based on user intent.
+2021-12-10 11:24:08,384 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:24:08,385 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 11:24:08,386 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:24:08,387 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:24:08,389 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:16,216 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:16,217 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:16,218 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:16,218 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:24:16,277 [DEBUG]  Received user message 'what is the time now?' with intent '{'id': 621614053048618687, 'name': 'inquire_time', 'confidence': 0.679585874080658}' and entities '[]'
+2021-12-10 11:24:16,278 [DEBUG]  Logged UserUtterance - tracker now has 20 events.
+2021-12-10 11:24:16,279 [DEBUG]  Current tracker state:
+[state 0] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 2] user intent: where_i_live | previous action name: action_listen
+[state 3] user intent: where_i_live | previous action name: action_remember_where
+[state 4] user intent: inquire_time | previous action name: action_listen
+2021-12-10 11:24:16,280 [DEBUG]  There is no memorised next action
+2021-12-10 11:24:16,280 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 7] user text: what is the time now? | previous action name: action_listen
+2021-12-10 11:24:16,281 [DEBUG]  There is no applicable rule.
+2021-12-10 11:24:16,282 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 7] user intent: inquire_time | previous action name: action_listen
+2021-12-10 11:24:16,282 [DEBUG]  There is a rule for the next action 'action_tell_time'.
+2021-12-10 11:24:16,323 [DEBUG]  TED predicted 'action_tell_time' based on user intent.
+2021-12-10 11:24:16,325 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:24:16,325 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:24:16,326 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:24:16,326 [DEBUG]  Predicted next action 'action_tell_time' with confidence 1.00.
+2021-12-10 11:24:16,327 [DEBUG]  Calling action endpoint to run action 'action_tell_time'.
+2021-12-10 11:24:16,335 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff52c3fa130>]'.
+2021-12-10 11:24:16,336 [DEBUG]  Action 'action_tell_time' ended with events '[BotUttered('It's 11:24 utc now. You can also give me a place.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639135456.335468)]'.
+2021-12-10 11:24:16,337 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:24:16,338 [DEBUG]  Current tracker state:
+[state 0] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 1] user intent: where_i_live | previous action name: action_listen
+[state 2] user intent: where_i_live | previous action name: action_remember_where
+[state 3] user intent: inquire_time | previous action name: action_listen
+[state 4] user intent: inquire_time | previous action name: action_tell_time
+2021-12-10 11:24:16,340 [DEBUG]  There is no memorised next action
+2021-12-10 11:24:16,341 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 7] user intent: inquire_time | previous action name: action_listen
+[state 8] user intent: inquire_time | previous action name: action_tell_time
+2021-12-10 11:24:16,342 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 11:24:16,377 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-10 11:24:16,378 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:24:16,379 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 11:24:16,379 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:24:16,380 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:24:16,381 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:42,070 [DEBUG]  Issuing ticket for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:42,071 [DEBUG]  Acquiring lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:42,071 [DEBUG]  Acquired lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+2021-12-10 11:24:42,072 [DEBUG]  Recreating tracker for id '8c79a6a05a5043e88fda68458609ee4e'
+2021-12-10 11:24:42,138 [DEBUG]  Received user message 'find address for DID did:sov:CYCc2xaJKrp8Yt947Nc6jd' with intent '{'id': 8168786447351350556, 'name': 'did_to_addr', 'confidence': 0.995934784412384}' and entities '[{'entity': 'DID', 'start': 21, 'end': 51, 'confidence_entity': 0.998035728931427, 'value': 'did:sov:CYCc2xaJKrp8Yt947Nc6jd', 'extractor': 'DIETClassifier'}]'
+2021-12-10 11:24:42,140 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:24:42,140 [DEBUG]  Logged UserUtterance - tracker now has 25 events.
+2021-12-10 11:24:42,141 [DEBUG]  Current tracker state:
+[state 0] user intent: where_i_live | previous action name: action_listen
+[state 1] user intent: where_i_live | previous action name: action_remember_where
+[state 2] user intent: inquire_time | previous action name: action_listen
+[state 3] user intent: inquire_time | previous action name: action_tell_time
+[state 4] user intent: did_to_addr | user entities: ('DID',) | previous action name: action_listen
+2021-12-10 11:24:42,142 [DEBUG]  There is no memorised next action
+2021-12-10 11:24:42,143 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 7] user intent: inquire_time | previous action name: action_listen
+[state 8] user intent: inquire_time | previous action name: action_tell_time
+[state 9] user text: find address for DID did:sov:CYCc2xaJKrp8Yt947Nc6jd | previous action name: action_listen
+2021-12-10 11:24:42,144 [DEBUG]  There is no applicable rule.
+2021-12-10 11:24:42,145 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 7] user intent: inquire_time | previous action name: action_listen
+[state 8] user intent: inquire_time | previous action name: action_tell_time
+[state 9] user intent: did_to_addr | user entities: ('DID',) | previous action name: action_listen
+2021-12-10 11:24:42,146 [DEBUG]  There is a rule for the next action 'action_did_to_addr'.
+2021-12-10 11:24:42,189 [DEBUG]  TED predicted 'action_tell_time' based on user intent.
+2021-12-10 11:24:42,190 [DEBUG]  Made prediction using user intent.
+2021-12-10 11:24:42,191 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-10 11:24:42,191 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:24:42,192 [DEBUG]  Predicted next action 'action_did_to_addr' with confidence 1.00.
+2021-12-10 11:24:42,193 [DEBUG]  Calling action endpoint to run action 'action_did_to_addr'.
+2021-12-10 11:24:42,201 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff52ce12c10>]'.
+2021-12-10 11:24:42,202 [DEBUG]  Action 'action_did_to_addr' ended with events '[BotUttered('This identity None was not found, or does not have an associated Account Address', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1639135482.201689)]'.
+2021-12-10 11:24:42,202 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-12-10 11:24:42,204 [DEBUG]  Current tracker state:
+[state 0] user intent: where_i_live | previous action name: action_listen
+[state 1] user intent: where_i_live | previous action name: action_remember_where
+[state 2] user intent: inquire_time | previous action name: action_listen
+[state 3] user intent: inquire_time | previous action name: action_tell_time
+[state 4] user intent: inquire_time | previous action name: action_listen
+2021-12-10 11:24:42,205 [DEBUG]  There is no memorised next action
+2021-12-10 11:24:42,206 [DEBUG]  Current tracker state:
+[state 1] user intent: inquire_time | user entities: ('place',) | previous action name: action_listen
+[state 2] user intent: inquire_time | user entities: ('place',) | previous action name: action_tell_time
+[state 3] user intent: where_i_live | previous action name: action_listen
+[state 4] user intent: where_i_live | previous action name: action_remember_where
+[state 5] user intent: inquire_esri | user entities: ('location',) | previous action name: action_listen
+[state 6] user intent: inquire_esri | user entities: ('location',) | previous action name: action_ESRI
+[state 7] user intent: inquire_time | previous action name: action_listen
+[state 8] user intent: inquire_time | previous action name: action_tell_time
+[state 9] user intent: did_to_addr | user entities: ('DID',) | previous action name: action_listen
+[state 10] user intent: did_to_addr | user entities: ('DID',) | previous action name: action_did_to_addr
+2021-12-10 11:24:42,207 [DEBUG]  There is a rule for the next action 'action_listen'.
+2021-12-10 11:24:42,245 [DEBUG]  TED predicted 'action_tell_time' based on user intent.
+2021-12-10 11:24:42,246 [DEBUG]  Predicted next action using policy_1_RulePolicy.
+2021-12-10 11:24:42,247 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-10 11:24:42,248 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-10 11:24:42,249 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-10 11:24:42,250 [DEBUG]  Deleted lock for conversation '8c79a6a05a5043e88fda68458609ee4e'.
+>>>>>>> d471fd8da0db6d667c42e706e71fb3cb2c30b76e

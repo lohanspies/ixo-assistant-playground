@@ -93,6 +93,7 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -112,3 +113,34 @@ nlu:
     - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFb](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSf](user_did)
     - voting bond from user [did:sov:CiPYfm8c83af2UraeDnNSb](user_did) to bond [did:ixo:49BSStn5nAwrfZwvGT6HFc](bond_did)
     - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFd](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSc](user_did)
+
+- intent: inquire_time
+  examples: |
+    - what time is it?
+    - what time is it in [Amsterdam](place)?
+    - what time is it in [London](place)?
+    - tell me the time in [Lisbon](place)
+    - what is the current time in [Berlin](place)
+    - what time is it in [amsterdam](place)[amsterdam](place)
+- lookup: place
+  examples: |
+    - brussels
+    - zagreb
+    - london
+    - lisbon
+    - amsterdam
+    - seattle
+- intent: where_i_live
+  examples: |
+    - please remember that i live in [Amsterdam](place)?
+    - my house is in [London](place)?
+    - reminder. i live in [Lisbon](place)
+    - my residence is in [Berlin](place)
+    - remember that i live in [london](place)
+- intent: inquire_time_difference
+  examples: |
+    - time difference between [Amsterdam](place)?
+    - what is my time difference with [London](place)?
+    - how big is the time delta with [Berlin](place)?
+    - is there a time difference with [Lisbon](place)?
+    - what is the time difference with [amsterdam](place)
