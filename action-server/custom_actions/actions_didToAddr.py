@@ -52,6 +52,7 @@ class ActionRememberDID(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
         current_DID = next(tracker.get_latest_entity_values("DID"), None)
 
         if not current_DID:
