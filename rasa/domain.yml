@@ -42,6 +42,23 @@ slots:
 #    mappings:
 #      - type: from_entity
 #        entity: place
+  trigger:
+    type: any
+  type:
+    type: any
+  bond_state:
+    type: any
+  chainId:
+    type: any
+  DID:
+    type: any
+  accountAddress:
+    type: any
+  user_did:
+    type: any
+  bond_did:
+    type: any
+
 
 responses:
   utter_greet:
