@@ -1,4 +1,4 @@
-## Rasa Chatbot Playground for Custom Action Development Environment for IXO Assistant
+## Rasa Chatbot Playground - A Custom Action Development Environment for IXO Assistant
 
 Rasa Chatbot Playground for Custom Action Development Environment for IXO Assistant to help developers who want to develop custom actions for the IXO assistant through an easy to use playground.
 <div style="text-align: center;">
@@ -49,14 +49,18 @@ The following docker containers will be started:
 
 Once the docker images are running, run the following commands.
 1) Log into Rasa Open Source server docker images shell
-        `docker exec -ti <containerid> /bin/bash`
-2) To train:
+        
+       docker ps - Fetch containerid for the rasa server 
+       docker exec -ti <containerid> /bin/bash
+       
+
+3) To train:
       
-       `rasa train`
+       rasa train
  
-3) Restart docker images:
+4) Restart docker images:
      
-       `docker-compose build;docker-compose up`
+       docker-compose build;docker-compose up
  
 Now your bot is running and you can give input messages.
  
