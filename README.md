@@ -1,9 +1,6 @@
 ## Rasa Chatbot Playground - A Custom Action Development Environment for IXO Assistant
 
 Rasa Chatbot Playground for Custom Action Development Environment for IXO Assistant to help developers who want to develop custom actions for the IXO assistant through an easy to use playground.
-<div style="text-align: center;">
-<img src="voff.gif"  width="700"> </img>
-</div>
 
 [Here](https://www.youtube.com/watch?v=VcbfcsjBBIg) is a great tutorial on how to create and configure custom actions with a sample 
 [repo](https://github.com/RasaHQ/conversational-ai-course-3.x) to illustrate all the required steps.
