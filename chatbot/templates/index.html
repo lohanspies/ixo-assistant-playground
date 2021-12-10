@@ -14,6 +14,11 @@
     // Replace 1.x.x with the version that you want
     (e.async = !0),
     (e.onload = () => {
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+        window.ethereum.request({ method: 'eth_requestAccounts' });
+      }
+
       window.WebChat.default(
         {
           customData: { language: "en" },
