@@ -8,3 +8,4 @@ lib64
 models
 .congig
 .keras
+out.log
