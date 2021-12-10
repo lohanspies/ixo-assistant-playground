@@ -45,6 +45,7 @@ services:
       - "5000:5000"
     networks:
       - rasa
+
   notebook-playground:
     build:
       context: ./notebook-playground

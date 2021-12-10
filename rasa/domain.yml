@@ -11,7 +11,9 @@ intents:
   - inquire_esri
   - did_to_addr
   - relayer_vote
-
+  - where_i_live
+  - inquire_time_difference
+  - inquire_time
 entities:
   - location
   - trigger
@@ -20,7 +22,24 @@ entities:
   - bond_did
   - chainId
   - DID
+  - place
 
+actions:
+  - action_ESRI
+  - action_remember_where
+  - action_tell_time
+  - action_time_difference
+  - utter_greet
+  - action_voting_bond
+  - action_did_to_addr
+
+#slots:
+#  location:
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#      - type: from_entity
+#        entity: place
 
 responses:
   utter_greet:
@@ -45,5 +64,3 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-actions:
-- action_ESRI
