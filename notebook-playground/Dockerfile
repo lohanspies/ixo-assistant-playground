@@ -1,0 +1,24 @@
+FROM continuumio/miniconda3
+
+ENV WORKSPACE /workspace
+
+# Setup workspace environment
+RUN apt-get update && apt-get install -y gcc
+# RUN conda install -c conda-forge jupyterlab==3.0.11
+RUN conda install -c conda-forge jupyterlab==3.0.11
+
+
+ADD requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
+
+# Create jupyter notebook workspace
+#RUN mkdir $WORKSPACE
+WORKDIR $WORKSPACE
+
+# Make the image start the jupyter notebook
+COPY jupyter-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# ENTRYPOINT ["/entrypoint.sh", "$env_jupyter_port"]
+ENTRYPOINT ["/entrypoint.sh", "8888"]

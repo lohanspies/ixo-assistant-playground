@@ -46,6 +46,16 @@ services:
       - "5000:5000"
     networks:
       - rasa
+  notebook-playground:
+    build:
+      context: ./notebook-playground
+    networks:
+      - rasa
+    volumes:
+      - ./notebooks:/workspace
+    ports:
+      # Jupyter Notebook port - always map from 8888 to any available port
+      - 8888:8888
 
 networks:
   rasa:
