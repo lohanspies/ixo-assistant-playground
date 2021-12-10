@@ -1,18 +1,25 @@
 version: "2.0"
 
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- inquire_esri
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - inquire_esri
+  - did_to_addr
+  - relayer_vote
 
 entities:
-- location
-
+  - location
+  - trigger
+  - type
+  - user_did
+  - bond_did
+  - chainId
+  - DID
 
 
 responses:

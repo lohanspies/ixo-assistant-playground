@@ -77,7 +77,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -94,10 +93,22 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: did_to_addr
+  examples: |
+    - find address for DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - can i know account address DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - i want to know address of DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - tell me the address of DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+    - fetch address of DID [did:sov:CYCc2xaJKrp8Yt947Nc6jd](DID)
+- intent: relayer_vote
+  examples: |
+    - voting bond from user [did:sov:CiPYfm8c83af2UraeDnNSk](user_did) to bond [did:ixo:49BSStn5nAwrfZwvGT6HFa](bond_did)
+    - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFb](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSf](user_did)
+    - voting bond from user [did:sov:CiPYfm8c83af2UraeDnNSb](user_did) to bond [did:ixo:49BSStn5nAwrfZwvGT6HFc](bond_did)
+    - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFd](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSc](user_did)

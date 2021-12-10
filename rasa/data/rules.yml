@@ -16,3 +16,14 @@ rules:
   steps:
   - intent: inquire_esri
   - action: action_ESRI
+
+  
+- rule: Find Address for DID and Ixo Network
+  steps:
+  - intent: did_to_addr
+  - action: action_did_to_addr
+
+- rule: TRIGGER action_voting_bond when relayer_vote
+  steps:
+  - intent: relayer_vote
+  - action: action_voting_bond

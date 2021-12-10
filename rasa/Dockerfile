@@ -1,20 +1,12 @@
-# Extend the official Rasa SDK image
-FROM rasa/rasa-sdk:2.8.1
+FROM rasa/rasa:2.8.15-full
 
-# Change back to root user to install dependencies
+
+COPY commands.sh /scripts/commands.sh
+
 USER root
 
+RUN ["chmod", "+x", "/scripts/commands.sh"]
 
-# To install system dependencies
-# RUN apt-get update -qq && \
-#     apt-get install -y <NAME_OF_REQUIRED_PACKAGE> && \
-#     apt-get clean && \
-#     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-# To install packages from PyPI
-RUN pip install --no-cache-dir python-dotenv 
-RUN pip install --no-cache-dir arcgis
-# RUN pip install --no-cache-dir esri
-
-# Switch back to non-root to run code
 USER 1001
+
+ENTRYPOINT ["/scripts/commands.sh"]

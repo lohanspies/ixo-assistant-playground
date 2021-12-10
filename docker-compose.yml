@@ -5,11 +5,10 @@ services:
       - UID=1000
       - GID=1001
     user: "${UID}:${GID}"
-    # env_file:
-    #   - ./rasa/.env
-#    image: rasa/rasa:3.0.1-full
-    image: rasa/rasa:2.8.15-full
-    container_name: rasa-server
+    image: rasa/rasa:3.0.1-full
+    # build:
+    #   context: ./rasa
+    # container_name: rasa-server
     ports:
       - "5005:5005"
     volumes:  
@@ -29,11 +28,11 @@ services:
 
   action-server:
     build:
-      context: ./rasa
+      context: ./action-server
     container_name: rasa-action-server
 #    image: rasa/rasa-sdk:3.0.2
     volumes:
-      - ./rasa/actions:/app/actions
+      - ./action-server/custom_actions:/app/actions
     ports:
       - "5055:5055"
     networks:
@@ -52,7 +51,7 @@ services:
     networks:
       - rasa
     volumes:
-      - ./notebooks:/workspace
+      - ./notebook-playground/notebooks:/workspace
     ports:
       # Jupyter Notebook port - always map from 8888 to any available port
       - 8888:8888
