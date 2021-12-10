@@ -23,6 +23,11 @@ rules:
   - intent: did_to_addr
   - action: action_did_to_addr
 
+- rule: Store my DID intent
+  steps:
+  - intent: remember_DID
+  - action: action_remember_DID
+
 - rule: TRIGGER action_voting_bond when relayer_vote
   steps:
   - intent: relayer_vote

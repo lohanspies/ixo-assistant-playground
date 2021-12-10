@@ -113,6 +113,13 @@ nlu:
     - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFb](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSf](user_did)
     - voting bond from user [did:sov:CiPYfm8c83af2UraeDnNSb](user_did) to bond [did:ixo:49BSStn5nAwrfZwvGT6HFc](bond_did)
     - perform voting bond to bond [did:ixo:49BSStn5nAwrfZwvGT6HFd](bond_did) from user [did:sov:CiPYfm8c83af2UraeDnNSc](user_did)
+- intent: remember_DID
+  examples: |
+    - please remember my DID is [did:sov:CiPYfm8c83af2UraeDnNSk](DID)
+    - my DID is [did:sov:CiPYfm8c83af2UraeDnNSk](DID)?
+    - reminder. my DID is [did:sov:CiPYfm8c83af2UraeDnNSk](DID)
+    - my DID is at [did:sov:CiPYfm8c83af2UraeDnNSk](DID)
+    - remember that my DID is [did:sov:CiPYfm8c83af2UraeDnNSk](DID)
 
 - intent: inquire_time
   examples: |

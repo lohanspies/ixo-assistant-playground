@@ -14,6 +14,7 @@ intents:
   - where_i_live
   - inquire_time_difference
   - inquire_time
+  - remember_DID
 entities:
   - location
   - trigger
@@ -32,6 +33,7 @@ actions:
   - utter_greet
   - action_voting_bond
   - action_did_to_addr
+  - action_remember_DID
 
 slots:
   location:

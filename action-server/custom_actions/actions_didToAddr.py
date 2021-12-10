@@ -16,13 +16,17 @@ class ActionDIDToAddr(Action):
         """The custom action will take the chainId and DID from the chatbot slots and
             sets the accountAddress slot associated with DID in that network if exists
         """
-        
-        chainId = tracker.get_slot('chainId')
-        DID = tracker.get_slot('DID')
+
+        DID = next(tracker.get_latest_entity_values('DID'), None)
+        print('The DID is: ', DID)
+        chainId = 'impacthub'
+        # chainId = tracker.get_slot('chainId')
+        if not DID:
+            DID = tracker.get_slot('DID')
         accountAddress = None
         status = None
         if chainId and DID:
-            URL = f'https://{chainId}.ixo.world/didToAddr/{DID}'
+            URL = f'https://impacthub.ixo.world/didToAddr/{DID}'
             
             with requests.session() as sess:
                 try:
@@ -38,3 +42,24 @@ class ActionDIDToAddr(Action):
                     dispatcher.utter_message("The network was not found")
         else:       
             dispatcher.utter_message(f'This identity {DID} was not found, or does not have an associated Account Address')
+
+
+class ActionRememberDID(Action):
+
+    def name(self) -> Text:
+        return "action_remember_DID"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        current_DID = next(tracker.get_latest_entity_values("DID"), None)
+
+        if not current_DID:
+            msg = "I didn't get your DID. Are you sure it's spelled correctly?"
+            dispatcher.utter_message(text=msg)
+            return []
+
+        msg = f"Sure thing! I'll remember that your DID is {current_DID}."
+        dispatcher.utter_message(text=msg)
+
+        return [SlotSet("DID", current_DID)]

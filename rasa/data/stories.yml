@@ -14,6 +14,10 @@ stories:
   - action: action_remember_where
   - intent: inquire_time_difference
   - action: action_time_difference
+  - intent: remember_DID
+  - action: action_remember_DID
+  - intent: inquire_esri
+  - action: action_ESRI
 
 - story: sad path 1
   steps:
