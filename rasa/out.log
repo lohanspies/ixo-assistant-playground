@@ -5742,3 +5742,997 @@ Assuming last tag is L- instead of I-.
 2021-12-10 10:42:42,488 [DEBUG]  Policy prediction ended with events '[]'.
 2021-12-10 10:42:42,488 [DEBUG]  Action 'action_listen' ended with events '[]'.
 2021-12-10 10:42:42,489 [DEBUG]  Deleted lock for conversation '436637f1793a425f8d20de3823982267'.
+2021-12-10 10:47:15,524 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         GET                            handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 10:47:15,524 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2021-12-10 10:47:15,525 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 10:47:16,050 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 10:47:16,798 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 10:47:16,895 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 10:47:16,895 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 10:47:16,896 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 10:47:16,896 [INFO ]  Loading model models/20211209-214211.tar.gz...
+2021-12-10 10:47:17,598 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 2.8.15 and is not compatible with your current installation which supports models build with Rasa Open Source 3.0.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2021-12-10 10:47:17,598 [INFO ]  Rasa server is up and running.
+2021-12-10 10:47:17,599 [INFO ]  Enabling coroutine debugging. Loop id 91311296.
+2021-12-10 10:47:22,797 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZz6MS'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:47:28,816 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZz7qd'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:47:34,839 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZz9IX'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:47:40,861 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzAmo'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:47:46,898 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzCEw'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:47:52,936 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzDjE'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:47:58,959 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzFBe'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:04,999 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzGfg'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:11,044 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzI87'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:17,079 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzJcX'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:23,103 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzL4s'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:29,147 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzMYw'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:35,190 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzO1R'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:41,218 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzPVw'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:47,236 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzQz-'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:53,267 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzSRr'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:48:59,308 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzTwI'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:49:05,359 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzVOn'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:49:11,408 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzWt6'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:49:17,059 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzYFq'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:49:23,078 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzZji'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:49:25,614 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-48' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7efc25c69460>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:49:25,615 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-50' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7efc25c56310>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:49:25,615 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-53' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7efc25d7feb0>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:49:25,616 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-55' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7efc25d7fbb0>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:49:25,616 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 396, in _handle_connect
+    self.start_background_task(self._service_task)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-7' coro=<AsyncServer._service_task() running at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:498> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7efc25d7ff40>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:49:49,415 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/socket.io                                         POST                           handle_request
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/webhooks/socketio                                 GET                            socketio_webhook.health
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-12-10 10:49:49,416 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2021-12-10 10:49:49,416 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-10 10:49:49,879 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-10 10:49:50,623 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-10 10:49:50,664 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-10 10:49:50,664 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-10 10:49:50,664 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-10 10:49:50,665 [INFO ]  Loading model models/20211209-214211.tar.gz...
+2021-12-10 10:49:51,113 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 2.8.15 and is not compatible with your current installation which supports models build with Rasa Open Source 3.0.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2021-12-10 10:49:51,113 [INFO ]  Rasa server is up and running.
+2021-12-10 10:49:51,115 [INFO ]  Enabling coroutine debugging. Loop id 101000384.
+2021-12-10 10:49:53,221 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzh4a'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:49:59,245 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZziZ5'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:05,275 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzk1C'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:11,317 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzlVU'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:17,362 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzmzt'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:23,382 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzoRn'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:29,210 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzptG'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:30,359 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzq9D'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:33,313 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzqtA'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:36,095 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzrYZ'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:40,930 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzsk5'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:45,978 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZztyu'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:51,021 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzvBi'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:50:56,053 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzwQW'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:01,079 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzxfC'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:06,105 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZzytg'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:11,126 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZz-6B'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:16,145 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZz_Kc'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:21,176 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-0Z2'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:26,198 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-1nf'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:31,218 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-305'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:36,241 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-4EZ'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:41,263 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-5T0'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:46,289 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-6hY'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:51,329 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-7w5'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:51:56,364 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-98x'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:52:01,385 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-ANW'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:52:06,404 [ERROR]  Exception occurred while handling uri: 'http://0.0.0.0:5005/socket.io/?EIO=4&transport=polling&t=NsZ-Bbv'
+Traceback (most recent call last):
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 317, in handle_request
+    return await self._make_response(r, environ)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 385, in _make_response
+    response = make_response(
+  File "/opt/venv/lib/python3.8/site-packages/engineio/async_drivers/sanic.py", line 102, in make_response
+    return HTTPResponse(body=payload, content_type=content_type,
+TypeError: 'NoneType' object is not callable
+2021-12-10 10:52:06,805 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-56' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2cbaac0>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:52:06,806 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-58' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2cba670>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:52:06,806 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-60' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2b8dd00>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:52:06,807 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-62' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2b52c10>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:52:06,807 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 408, in _handle_connect
+    s.schedule_ping()
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py", line 132, in schedule_ping
+    self.server.start_background_task(send_ping)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-64' coro=<AsyncSocket.schedule_ping.<locals>.send_ping() done, defined at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_socket.py:125> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2b52ac0>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>
+2021-12-10 10:52:06,807 [ERROR]  Task was destroyed but it is pending!
+source_traceback: Object created at (most recent call last):
+  File "/opt/venv/bin/rasa", line 8, in <module>
+    sys.exit(main())
+  File "/opt/venv/lib/python3.8/site-packages/rasa/__main__.py", line 121, in main
+    cmdline_arguments.func(cmdline_arguments)
+  File "/opt/venv/lib/python3.8/site-packages/rasa/cli/run.py", line 95, in run
+    rasa.run(**vars(args))
+  File "/opt/venv/lib/python3.8/site-packages/rasa/api.py", line 56, in run
+    rasa.core.run.serve_application(
+  File "/opt/venv/lib/python3.8/site-packages/rasa/core/run.py", line 221, in serve_application
+    app.run(
+  File "/opt/venv/lib/python3.8/site-packages/sanic/app.py", line 1051, in run
+    serve_single(server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 199, in serve_single
+    serve(**server_settings)
+  File "/opt/venv/lib/python3.8/site-packages/sanic/server/runners.py", line 150, in serve
+    loop.run_forever()
+  File "connection_task", line 15, in connection_task
+    from sanic.http import Http, Stage
+  File "/opt/venv/lib/python3.8/site-packages/sanic/http.py", line 146, in http1
+    await self.protocol.request_handler(self.request)
+  File "/opt/venv/lib/python3.8/site-packages/sanic_plugin_toolkit/realm.py", line 550, in _handle_request_21_03
+    _ = await real_handle(request)
+  File "handle_request", line 83, in handle_request
+    class Sanic(BaseSanic, metaclass=TouchUpMeta):
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 258, in handle_request
+    r = await self._handle_connect(environ, transport,
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 396, in _handle_connect
+    self.start_background_task(self._service_task)
+  File "/opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py", line 332, in start_background_task
+    return asyncio.ensure_future(target(*args, **kwargs))
+task: <Task pending name='Task-7' coro=<AsyncServer._service_task() running at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:498> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x7fcaa2b8da60>()] created at /usr/lib/python3.8/asyncio/tasks.py:654> created at /opt/venv/lib/python3.8/site-packages/engineio/asyncio_server.py:332>

@@ -5,7 +5,7 @@ services:
       - UID=1000
       - GID=1001
     user: "${UID}:${GID}"
-    image: rasa/rasa:3.0.1-full
+    image: rasa/rasa:2.8.15-full
     # build:
     #   context: ./rasa
     # container_name: rasa-server
