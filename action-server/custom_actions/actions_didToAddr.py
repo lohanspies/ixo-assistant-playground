@@ -26,6 +26,7 @@ class ActionDIDToAddr(Action):
         accountAddress = None
         status = None
         if chainId and DID:
+            # URL = f'https://{chainId}.ixo.world/bonds/{bond_did}'
             URL = f'https://impacthub.ixo.world/didToAddr/{DID}'
             
             with requests.session() as sess:
@@ -43,6 +44,7 @@ class ActionDIDToAddr(Action):
         else:       
             dispatcher.utter_message(f'This identity {DID} was not found, or does not have an associated Account Address')
 
+        dispatcher.utter_message()
 
 class ActionRememberDID(Action):
 

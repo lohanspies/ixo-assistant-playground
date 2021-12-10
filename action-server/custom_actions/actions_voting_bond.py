@@ -20,11 +20,13 @@ class ActionVotingBond(Action):
         """
         
         bond_did = tracker.get_slot("bond_did")
-        chainId = tracker.get_slot('chainId')
+        chainId = 'impacthub'
+        # chainId = tracker.get_slot('chainId')
         state = None
         if chainId and bond_did:
             
-            URL = f'https://{chainId}.ixo.world/bonds/{bond_did}'
+            # URL = f'https://{chainId}.ixo.world/bonds/{bond_did}'
+            URL = f'https://impacthub.ixo.world/didToAddr/{DID}'
             with requests.session() as sess:
                 try:
                     response = sess.get(URL)
