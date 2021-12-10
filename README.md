@@ -1,33 +1,10 @@
 ## Green Yoma - ESRI Custom Action for IXO Assistant
-Make sure you have `conda` installed in a virtual environment with Python 3.7.
+Git pull the repo.
 
-Then install the ESRI and ArcGIS Python packages via conda.
+Cd into repo folder.
 
-Open a terminal application, navigate to the directory you want to work in and activate the conda environment you want to use with the ArcGIS API for Python. 
+`docker-compose up`
 
-Install the API with the following command:
+Access the web chat bot by going to `http://localhost:5000/`
 
-`conda install -c esri arcgis`
-
-Install Jupyter.
-
-`conday install jupyter`
-
-Start Jupyter
-
-`jupyter-notebook`
-
-Install packages
-
-`pip3 install -U --user pip && pip3 install rasa rasa-sdk`
-
-Follow this link to install [rasa-server](https://rasa.com/docs/rasa/installation/).
-
-Init Rasa Server
-`rasa init`
-
-Another method to setup Rasa
-
-`https://github.com/rsykoss/rasa-chatbot-webchat-deployment`
-
-This PyPi package provide a Rasa Docker setup in the [Project Description](https://pypi.org/project/rasa-sdk/).
+Access the Jupyter Notebook by going to `http://localhost:8888/`
